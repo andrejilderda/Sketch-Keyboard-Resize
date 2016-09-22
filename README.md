@@ -35,8 +35,8 @@ Specify the resize amount via 'Keyboard Resize › Set Small/Big Resize Distance
 | Set Small Resize Distance | - |
 
 ## Installation
- 1. [Download](Keyboard Resize.sketchplugin) the plugin.
- 2. Run ‘keyboard-resize.sketchplugin’ to install
+ 1. [Download](https://github.com/ANGIstudio/Keyboard-Resize/archive/master.zip) the plugin.
+ 2. Unzip and run ‘Keyboard Resize.sketchplugin’ to install
 
 ## Thanks to:
 This plugin is inspired by John Dunning's [Keyboard Resize](http://johndunning.com/fireworks/about/KeyboardResize), a Fireworks plugin I've used for a long time!
