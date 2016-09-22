@@ -1,0 +1,158 @@
+{
+    "name" : "Keyboard Resize",
+    "identifier" : "com.sketchapp.keyboardresize",
+    "version" : "1.0",
+    "description" : "Quickly resize objects with keyboard shortcuts",
+    "authorEmail" : "mail@andrejilderda.nl",
+    "author" : "Andre Jilderda",
+    "commands" : [
+    {
+      "script" : "keyboard-resize.js",
+      "handler" : "onExpandTopBig",
+      "shortcut" : "cmd shift ↑",
+      "name" : "Expand Top ++",
+      "identifier" : "onExpandTopBig"
+    },
+    {
+      "script" : "keyboard-resize.js",
+      "handler" : "onExpandRightBig",
+      "shortcut" : "cmd shift →",
+      "name" : "Expand Right ++",
+      "identifier" : "onExpandRightBig"
+    },
+    {
+      "script" : "keyboard-resize.js",
+      "handler" : "onExpandBottomBig",
+      "shortcut" : "cmd shift ↓",
+      "name" : "Expand Bottom ++",
+      "identifier" : "onExpandBottomBig"
+    },
+    {
+      "script" : "keyboard-resize.js",
+      "handler" : "onExpandLeftBig",
+      "shortcut" : "cmd shift ←",
+      "name" : "Expand Left ++",
+      "identifier" : "onExpandLeftBig"
+    },
+    {
+      "script" : "keyboard-resize.js",
+      "handler" : "onExpandTopSmall",
+      "shortcut" : "cmd ↑",
+      "name" : "Expand Top +",
+      "identifier" : "onExpandTopSmall"
+    },
+    {
+      "script" : "keyboard-resize.js",
+      "handler" : "onExpandRightSmall",
+      "shortcut" : "cmd →",
+      "name" : "Expand Right +",
+      "identifier" : "onExpandRightSmall"
+    },
+    {
+      "script" : "keyboard-resize.js",
+      "handler" : "onExpandBottomSmall",
+      "shortcut" : "cmd ↓",
+      "name" : "Expand Bottom +",
+      "identifier" : "onExpandBottomSmall"
+    },
+    {
+      "script" : "keyboard-resize.js",
+      "handler" : "onExpandLeftSmall",
+      "shortcut" : "cmd ←",
+      "name" : "Expand Left +",
+      "identifier" : "onExpandLeftSmall"
+    },
+    {
+      "script" : "keyboard-resize.js",
+      "handler" : "onContractTopBig",
+      "shortcut" : "ctrl shift cmd ↓",
+      "name" : "Contract Top --",
+      "identifier" : "onContractTopBig"
+    },
+    {
+      "script" : "keyboard-resize.js",
+      "handler" : "onContractRightBig",
+      "shortcut" : "ctrl shift cmd ←",
+      "name" : "Contract Right --",
+      "identifier" : "onContractRightBig"
+    },
+    {
+      "script" : "keyboard-resize.js",
+      "handler" : "onContractBottomBig",
+      "shortcut" : "ctrl shift cmd ↑",
+      "name" : "Contract Bottom --",
+      "identifier" : "onContractBottomBig"
+    },
+    {
+      "script" : "keyboard-resize.js",
+      "handler" : "onContractLeftBig",
+      "shortcut" : "ctrl shift cmd →",
+      "name" : "Contract Left --",
+      "identifier" : "onContractLeftBig"
+    },
+    {
+      "script" : "keyboard-resize.js",
+      "handler" : "onContractTopSmall",
+      "shortcut" : "ctrl cmd ↓",
+      "name" : "Contract Top -",
+      "identifier" : "onContractTopSmall"
+    },
+    {
+      "script" : "keyboard-resize.js",
+      "handler" : "onContractRightSmall",
+      "shortcut" : "ctrl cmd ←",
+      "name" : "Contract Right -",
+      "identifier" : "onContractRightSmall"
+    },
+    {
+      "script" : "keyboard-resize.js",
+      "handler" : "onContractBottomSmall",
+      "shortcut" : "ctrl cmd ↑",
+      "name" : "Contract Bottom -",
+      "identifier" : "onContractBottomSmall"
+    },
+    {
+      "script" : "keyboard-resize.js",
+      "handler" : "onContractLeftSmall",
+      "shortcut" : "ctrl cmd →",
+      "name" : "Contract Left -",
+      "identifier" : "onContractLeftSmall"
+    },
+    {
+      "script" : "keyboard-resize.js",
+      "handler" : "onSetBigResizeDistance",
+      "shortcut" : "",
+      "name" : "Set Big Resize Distance",
+      "identifier" : "onSetBigResizeDistance"
+    },
+    {
+      "script" : "keyboard-resize.js",
+      "handler" : "onSetSmallResizeDistance",
+      "shortcut" : "",
+      "name" : "Set Small Resize Distance",
+      "identifier" : "onSetSmallResizeDistance"
+    }
+  ],
+  "menu": {
+    "items": [
+      "onExpandTopBig",
+      "onExpandRightBig",
+      "onExpandBottomBig",
+      "onExpandLeftBig",
+      "onExpandTopSmall",
+      "onExpandRightSmall",
+      "onExpandBottomSmall",
+      "onExpandLeftSmall",
+      "onContractTopSmall",
+      "onContractRightSmall",
+      "onContractBottomSmall",
+      "onContractLeftSmall",
+      "onContractTopBig",
+      "onContractRightBig",
+      "onContractBottomBig",
+      "onContractLeftBig",
+      "onSetSmallResizeDistance",
+      "onSetBigResizeDistance"
+    ]
+  }
+}
