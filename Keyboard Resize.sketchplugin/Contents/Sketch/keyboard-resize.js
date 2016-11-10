@@ -7,6 +7,11 @@ function resize(context,t,r,b,l) {
 		var layer = selection.objectAtIndex(i);
 		var frame = layer.frame();
 
+		//if layer is a textlayer, set width to fixed
+		if (layer instanceof MSTextLayer) {
+			layer.setTextBehaviour(1);
+		}
+
 		// Top
 		if(t != 0) {
 			if (frame.height() + t < 0) {
