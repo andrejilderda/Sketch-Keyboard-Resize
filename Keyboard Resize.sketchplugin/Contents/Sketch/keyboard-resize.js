@@ -1,5 +1,3 @@
-@import "persistence.js";
-
 function resize(context,t,r,b,l) {
 	var doc = context.document;
 	var selection = context.selection;
@@ -51,16 +49,29 @@ function resize(context,t,r,b,l) {
 	doc.reloadInspector(); //makes it a lot slower, but timeouts/throttling don't seem to work...
 }
 
+// A nicer/shorter way for saving settings than using persistence.js: http://developer.sketchapp.com/reference/api/file/api/Application.js.html
+// It seems like they are not part of the Sketch API yet, as long as that's not
+// the case use 'rc' as a prefix to prevent conflicts in the future
+
+// Set setting for key
+function rcSetSettingForKey(key, value) {
+    NSUserDefaults.standardUserDefaults().setObject_forKey_(value, key)
+}
+// Get setting for key
+function rcSettingForKey(key) {
+    return NSUserDefaults.standardUserDefaults().objectForKey_(key);
+}
+
 function getBigResizeDistance() {
-	if (persist.get("bigResizeDistance")) {
-		return persist.get("bigResizeDistance");
+	if (rcSettingForKey("bigResizeDistance")) {
+		return rcSettingForKey("bigResizeDistance");
 	} else {
 		return 10;
 	}
 }
 function getSmallResizeDistance() {
-	if (persist.get("smallResizeDistance")) {
-		return persist.get("smallResizeDistance");
+	if (rcSettingForKey("smallResizeDistance")) {
+		return rcSettingForKey("smallResizeDistance");
 	} else {
 		return 1;
 	}
@@ -130,12 +141,12 @@ function onContractLeftSmall(context) {
 function onSetBigResizeDistance(context) {
 	var doc = context.document;
 	var resizePrompt = doc.askForUserInput_initialValue("Set big resize distance to:", getBigResizeDistance());
-	persist.set("bigResizeDistance", resizePrompt);
+	rcSetSettingForKey("bigResizeDistance", resizePrompt);
 }
 function onSetSmallResizeDistance(context) {
 	var doc = context.document;
 	var resizePrompt = doc.askForUserInput_initialValue("Set small resize distance to:", getSmallResizeDistance());
 	if (!isNaN(resizePrompt)) {
-		persist.set("smallResizeDistance", resizePrompt);
+		rcSetSettingForKey("smallResizeDistance", resizePrompt);
 	}
 }
